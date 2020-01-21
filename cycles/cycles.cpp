@@ -19,12 +19,30 @@ int main()
 	cout << "Введите x:\n";
 	cin >> x;
 
-	for (int i = 0; i <= 5; i++) {
+	for (int i = 1; i <= 5; i++) {
 		z += pow(i, 3) + i * x;
 	}
 
-	cout << "\nСумма при множителе" << x << "Равна " << z << "\n\n";
+	cout << "\n FOR: Сумма при множителе " << x << " равна " << z << "\n\n";
+	z = 0;
 
+	int n = 1;
+	while (n <= 5) {
+		z += pow(n, 3) + n * x;
+		n++;
+	}
+
+	cout << "\n WHILE: Сумма при множителе " << x << " равна " << z << "\n\n";
+	z = 0;
+	n = 1;
+
+	do {
+		z += pow(n, 3) + n * x;
+		n++;
+	} while (n <= 5);
+
+	cout << "\n DO WHILE: Сумма при множителе " << x << " равна " << z << "\n\n";
+	z = 0;
 
 
 	system("pause");
