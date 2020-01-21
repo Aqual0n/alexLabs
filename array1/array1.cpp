@@ -13,20 +13,25 @@ int main()
 {
 	setlocale(LC_CTYPE, "Russian");
 
-	double x;
-	double z = 0;
+	int array[11];
 
-	cout << "Введите x:\n";
-	cin >> x;
-
-	for (int i = 0; i <= 5; i++) {
-		z += pow(i, 3) + i * x;
+	for (int i = 0; i < 11; i++) {
+		cout << "Введите число [" << i << "]\n";
+		cin >> array[i];
 	}
 
-	cout << "\nСумма при множителе" << x << "Равна " << z << "\n\n";
+	int sum = 0;
+
+	for (int i = 0; i < 11; i++) {
+		cout << array[i] << "\n";
+		if (array[i] < -1 || array[i] > 5) {
+			sum += array[i];
+		}
+	}
+	cout << "Сумма элементов, которые не лежат в диапазоне от -1 до 5 = " << sum;
 
 
-
+	cout << "\n\n";
 	system("pause");
 	return 0;
 }
