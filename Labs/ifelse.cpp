@@ -14,20 +14,24 @@ int main()
 	setlocale(LC_CTYPE, "Russian");
 
 	double x;
-	double z = 0;
+	double k;
 
 	cout << "Введите x:\n";
 	cin >> x;
 
-	for (int i = 0; i <= 5; i++) {
-		z += pow(i, 3) + i * x;
+	cout << "Введите k:\n";
+	cin >> k;
+
+	if (sin(tan(2 * M_PI*x / k)) > 0) {
+		k *= 3;
+		cout << "Значение положительное, k = " << k;
+	}
+	else {
+		cout << "Значение отрицательное, k = " << k;
 	}
 
-	cout << "\nСумма при множителе" << x << "Равна " << z << "\n\n";
-
-	
-
+	cout << "\n\n\n";
 	system("pause");
-    return 0;
+	return 0;
 }
 
